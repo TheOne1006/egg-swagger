@@ -7,7 +7,7 @@ module.exports = appInfo => {
   exports.swagger = {
     enable: true,
     mountPath: '/docs',
-    swaggerFilePath: 'http://127.0.0.1:7001/doc',
+    swaggerFilePath: '/doc',
     swaggerDefinition: {
       info: { // API informations (required)
         title: 'egg-swagger', // Title (required)
@@ -21,6 +21,21 @@ module.exports = appInfo => {
       path.resolve(appInfo.root, 'app/controller/*/*.js'),
       path.resolve(appInfo.root, 'app/model/*.js'),
     ],
+  };
+
+  const parameters = {
+    response: 'httpStatus',
+    checkMock: 'debugger',
+  }
+
+  // swaggerMock配置项
+  exports.swaggerMock = {
+    enable: true,
+    parameters,
+    // match(ctx) {
+    //   // return ctx.query.hasOwnProperty([ parameters.checkMock ]);
+    //   return true;
+    // }
   };
 
   return exports;

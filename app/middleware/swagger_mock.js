@@ -1,22 +1,17 @@
 'use strict';
 
+const mount = require('koa-mount');
+const swaggerJSDoc = require('swagger-jsdoc');
 const Swagmock = require('swagmock');
-module.exports = options => {
-  return function* (next) {
-    // 判断swagger是否开启 且请求参数包含debugger
-    if (this.swaggerSpec && this.query.hasOwnProperty([ options.parameters.checkMock ])) {
-      const Mockgen = Swagmock(this.swaggerSpec);
-      const querySatus = this.query[options.parameters.httpStatus];
-      const responseStatus = querySatus ? querySatus : 200;
-      const method = this.method.toLocaleLowerCase();
-      const mockData = yield Mockgen.responses({
-        path: this.path,
-        operation: method,
-        response: responseStatus,
-      });
-      this.body = mockData.responses;
-    } else {
-      yield next;
+
+module.exports = (options, app) => {
+  const swaggerOptions = app.config.swagger;
+
+  const middle = async ctx => {
+    if (swaggerOptions && swaggerOptions.enable) {
+      ctx.body = swaggerJSDoc(swaggerOptions);
     }
   };
+
+  return mount(swaggerOptions.swaggerFilePath, middle);
 };
