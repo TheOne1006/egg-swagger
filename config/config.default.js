@@ -26,16 +26,17 @@ module.exports = appInfo => {
   const parameters = {
     response: 'httpStatus',
     checkMock: 'debugger',
-  }
+  };
 
   // swaggerMock配置项
   exports.swaggerMock = {
     enable: true,
     parameters,
-    // match(ctx) {
-    //   // return ctx.query.hasOwnProperty([ parameters.checkMock ]);
-    //   return true;
-    // }
+    match(ctx) {
+      return ctx.app.config.swagger.apis && ctx.app.config.swagger.apis.length;
+      // return ctx.query.hasOwnProperty([ parameters.checkMock ]);
+      // return true;
+    },
   };
 
   return exports;

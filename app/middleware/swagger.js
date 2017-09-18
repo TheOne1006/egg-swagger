@@ -29,9 +29,9 @@ module.exports = (options, app) => {
     const compiledOptions = {
       mountPath: options.mountPath,
       swaggerFilePath,
-    }
+    };
     if (ctx.path === '/') {
-        ctx.body = compiled(compiledOptions);
+      ctx.body = compiled(compiledOptions);
     } else {
       await send(ctx, ctx.path, { root: publicPath });
     }
