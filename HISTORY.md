@@ -1,2 +1,4 @@
-## question
-1. 怎么利用 egg-static 创造多个 prefix
+## 20170918
+
+1. 移除谷歌字体
+2. 使用 `min.js`

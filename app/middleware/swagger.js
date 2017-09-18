@@ -30,6 +30,7 @@ module.exports = (options, app) => {
     const compiledOptions = {
       mountPath: options.mountPath,
       swaggerFilePath,
+      enableGoogleFont: options.enableGoogleFont,
     };
     if (ctx.path === '/') {
       ctx.body = compiled(compiledOptions);
