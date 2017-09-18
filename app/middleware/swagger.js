@@ -20,11 +20,12 @@ function getAddress({ address, port }) {
 }
 
 module.exports = (options, app) => {
+  const useMock = options.apis && options.apis.length;
   const address = getAddress({
     address: app.config.cluster.listen.hostname,
     port: app.config.cluster.listen.port,
   });
-  const swaggerFilePath = `${address}${options.swaggerFilePath}`;
+  const swaggerFilePath = useMock ? `${address}${options.swaggerFilePath}` : options.swaggerFilePath;
   const middle = async ctx => {
     const compiledOptions = {
       mountPath: options.mountPath,

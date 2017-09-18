@@ -22,7 +22,6 @@ module.exports = appInfo => {
       path.resolve(appInfo.root, 'app/model/*.js'),
     ],
   };
-
   const parameters = {
     response: 'httpStatus',
     checkMock: 'debugger',
