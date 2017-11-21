@@ -21,4 +21,9 @@ describe('test/swagger.test.js', () => {
       .expect('hi, swagger')
       .expect(200);
   });
+
+  it('should GET /test-swagger.json', async function() {
+    const res = request(app.callback()).get('/test-swagger.json');
+    console.log(res);
+  });
 });
