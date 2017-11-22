@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = agent => {
+module.exports = () => {
   // console.log('agent.config.env =', agent.config.env);
 };

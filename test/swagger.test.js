@@ -23,7 +23,7 @@ describe('test/swagger.test.js', () => {
       .expect(200);
   });
 
-  it('should GET /test-swagger.json', (done) => {
+  it('should GET /test-swagger.json', done => {
     const expected = {
       swagger: '2.0', // swagger api version
       info: {
@@ -60,7 +60,7 @@ describe('test/swagger.test.js', () => {
       });
   });
 
-  it('should GET /test-mount', (done) => {
+  it('should GET /test-mount', done => {
     request(app.callback())
       .get('/test-mount')
       .expect(200)
@@ -72,7 +72,7 @@ describe('test/swagger.test.js', () => {
       });
   });
 
-  it('should GET /test-mount/swagger-ui.css', (done) => {
+  it('should GET /test-mount/swagger-ui.css', done => {
     request(app.callback())
       .get('/test-mount/swagger-ui.css')
       .expect(200)

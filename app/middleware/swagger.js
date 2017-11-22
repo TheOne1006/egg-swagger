@@ -11,7 +11,7 @@ const templatePath = path.join(publicPath, 'template.html');
 const templateStr = fs.readFileSync(templatePath, 'utf8');
 const compiled = template(templateStr);
 
-module.exports = (options, app) => {
+module.exports = options => {
   const swaggerFilePath = options.swaggerFilePath;
   const middle = async ctx => {
     const compiledOptions = {
