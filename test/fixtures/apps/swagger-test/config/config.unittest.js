@@ -7,4 +7,8 @@ exports.swagger = {
   enableGoogleFont: false,
 };
 
+exports.middleware = [
+  'swagger',
+];
+
 exports.keys = '123456';

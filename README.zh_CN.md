@@ -20,9 +20,7 @@
 [download-image]: https://img.shields.io/npm/dm/egg-swagger.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-swagger
 
-<!--
-Description here.
--->
+egg 插件，提供 swagger-ui 2.0.
 
 ## 依赖说明
 
@@ -34,14 +32,8 @@ egg-swagger 版本 | egg 1.x
 0.x | ❌
 
 ### 依赖的插件
-<!--
 
-如果有依赖其它插件，请在这里特别说明。如
-
-- security
-- multipart
-
--->
+无
 
 ## 开启插件
 
@@ -55,8 +47,7 @@ exports.swagger = {
 
 ## 使用场景
 
-- Why and What: 描述为什么会有这个插件，它主要在完成一件什么事情。
-尽可能描述详细。
+- 提供像[swagger-ui](http://petstore.swagger.io/?_ga=2.67112721.1460016005.1511156320-1698683464.1510724052) 对外开放 restful api
 - How: 描述这个插件是怎样使用的，具体的示例代码，甚至提供一个完整的示例，并给出链接。
 
 ## 详细配置

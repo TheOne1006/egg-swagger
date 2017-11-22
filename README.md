@@ -9,20 +9,18 @@
 
 [npm-image]: https://img.shields.io/npm/v/egg-swagger.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/egg-swagger
-[travis-image]: https://img.shields.io/travis/eggjs/egg-swagger.svg?style=flat-square
-[travis-url]: https://travis-ci.org/eggjs/egg-swagger
-[codecov-image]: https://img.shields.io/codecov/c/github/eggjs/egg-swagger.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/eggjs/egg-swagger?branch=master
-[david-image]: https://img.shields.io/david/eggjs/egg-swagger.svg?style=flat-square
-[david-url]: https://david-dm.org/eggjs/egg-swagger
+[travis-image]: https://img.shields.io/travis/TheOne1006/egg-swagger.svg?style=flat-square
+[travis-url]: https://travis-ci.org/TheOne1006/egg-swagger
+[codecov-image]: https://img.shields.io/codecov/c/github/TheOne1006/egg-swagger.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/TheOne1006/egg-swagger?branch=master
+[david-image]: https://img.shields.io/david/TheOne1006/egg-swagger.svg?style=flat-square
+[david-url]: https://david-dm.org/TheOne1006/egg-swagger
 [snyk-image]: https://snyk.io/test/npm/egg-swagger/badge.svg?style=flat-square
 [snyk-url]: https://snyk.io/test/npm/egg-swagger
 [download-image]: https://img.shields.io/npm/dm/egg-swagger.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-swagger
 
-<!--
-Description here.
--->
+egg plugin，support swagger-ui 2.0.
 
 ## Install
 
@@ -45,6 +43,10 @@ exports.swagger = {
 ```js
 // {app_root}/config/config.default.js
 exports.swagger = {
+  enable: true,
+  mountPath: '/test-mount', // swagger-ui  address  <domain>/test-mount
+  swaggerFilePath: '/test-swagger.json', // swagger file default path
+  enableGoogleFont: false,
 };
 ```
 
@@ -52,11 +54,12 @@ see [config/config.default.js](config/config.default.js) for more detail.
 
 ## Example
 
+- [swagger-ui](http://petstore.swagger.io/?_ga=2.67112721.1460016005.1511156320-1698683464.1510724052) 对外开放 restful api
 <!-- example here -->
 
 ## Questions & Suggestions
 
-Please open an issue [here](https://github.com/eggjs/egg/issues).
+Please open an issue [here](https://github.com/TheOne1006/egg-swagger/issues).
 
 ## License
 
