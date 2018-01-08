@@ -73,11 +73,15 @@
 <script src="<%- mountPath %>/swagger-ui-standalone-preset.js"> </script>
 <script>
 window.onload = function() {
+  var swaggerFilePath = "<%- swaggerFilePath %>";
+  var isFullPathReg = /[a-zA-z]+:\/\/[^\s]*/.test(swaggerFilePath);
+  var origin = window.location.origin;
+  var url = isFullPathReg ? swaggerFilePath : origin+swaggerFilePath;
 
   // Build a system
-  const ui = SwaggerUIBundle({
+  var ui = SwaggerUIBundle({
     // url: "http://petstore.swagger.io/v2/swagger.json",
-    url: "<%- mountPath %>/<%- swaggerFilePath %>",
+    url: url,
     dom_id: '#swagger-ui',
     deepLinking: true,
     presets: [
