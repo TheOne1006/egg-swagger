@@ -77,7 +77,7 @@ window.onload = function() {
   // Build a system
   const ui = SwaggerUIBundle({
     // url: "http://petstore.swagger.io/v2/swagger.json",
-    url: "<%- swaggerFilePath %>",
+    url: "<%- mountPath %>/<%- swaggerFilePath %>",
     dom_id: '#swagger-ui',
     deepLinking: true,
     presets: [
