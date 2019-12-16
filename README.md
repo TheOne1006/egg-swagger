@@ -57,6 +57,16 @@ see [config/config.default.js](config/config.default.js) for more detail.
 - [swagger-ui](http://petstore.swagger.io/?_ga=2.67112721.1460016005.1511156320-1698683464.1510724052) 对外开放 restful api
 <!-- example here -->
 
+
+## Tips
+
+搭配 <https://github.com/TheOne1006/egg-connector-remote> 可直接生成对应的 swagger 数据
+
+## 依赖说明
+
+swagger.json 规则来自于
+<https://editor.swagger.io/?_ga=2.41951072.471192285.1510301833-940518916.1510301833#/>
+
 ## Questions & Suggestions
 
 Please open an issue [here](https://github.com/TheOne1006/egg-swagger/issues).
