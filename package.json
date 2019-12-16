@@ -1,6 +1,6 @@
 {
   "name": "egg-swagger",
-  "version": "1.1.2",
+  "version": "1.2.2",
   "description": "egg swagger doc",
   "eggPlugin": {
     "name": "swagger"
@@ -11,20 +11,21 @@
     "egg-plugin"
   ],
   "dependencies": {
-    "koa-mount": "^3.0.0",
-    "koa-send": "^4.1.0",
-    "lodash.template": "^4.4.0"
+    "koa-mount": "^4.0.0",
+    "koa-send": "^5.0.0",
+    "lodash.template": "^4.5.0",
+    "swagger-ui-dist": "^3.24.3"
   },
   "devDependencies": {
-    "autod": "^2.8.0",
-    "autod-egg": "^1.0.0",
-    "egg": "^1.4.0",
-    "egg-bin": "^3.4.0",
-    "egg-ci": "^1.6.0",
-    "egg-mock": "^3.7.0",
-    "eslint": "^3.19.0",
-    "eslint-config-egg": "^4.2.0",
-    "supertest": "^3.0.0",
+    "autod": "^3.1.0",
+    "autod-egg": "^1.1.0",
+    "egg": "^2.26.0",
+    "egg-bin": "^4.14.0",
+    "egg-ci": "^1.13.1",
+    "egg-mock": "^3.25.0",
+    "eslint": "^6.7.2",
+    "eslint-config-egg": "^8.0.0",
+    "supertest": "^4.0.2",
     "webstorm-disable-index": "^1.2.0"
   },
   "engines": {
@@ -41,9 +42,9 @@
   },
   "files": [
     "app",
-    "app.js",
+    "config",
     "agent.js",
-    "config"
+    "app.js"
   ],
   "ci": {
     "version": "6, 8"

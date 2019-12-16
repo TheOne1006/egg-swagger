@@ -5,6 +5,7 @@ const mount = require('koa-mount');
 const send = require('koa-send');
 const fs = require('fs');
 const template = require('lodash.template');
+const pathToSwaggerUi = require('swagger-ui-dist').absolutePath();
 
 const publicPath = path.join(__dirname, '../', 'public');
 const templatePath = path.join(publicPath, 'template.html');
@@ -22,7 +23,7 @@ module.exports = options => {
     if (ctx.path === '/') {
       ctx.body = compiled(compiledOptions);
     } else {
-      await send(ctx, ctx.path, { root: publicPath });
+      await send(ctx, ctx.path, { root: pathToSwaggerUi });
     }
   };
 
